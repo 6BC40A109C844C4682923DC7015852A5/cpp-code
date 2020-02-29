@@ -1,0 +1,12 @@
+# Log file
+*.log
+
+*.o
+*.exe
+
+build/
+
+.idea/
+.vscode/
+cmake-build-debug/
+.idea/.gitignore
