@@ -1,18 +1,15 @@
 #include <iostream>
 
-#define Max 100
-
 class Sqlist {
  public:
-  Sqlist(int n) : capacity(n){};
+  Sqlist(int n) : capacity(n), data(new int[n]){};
   Sqlist(){};
   bool insert(int data) {
-    if (this->size + 1 > this->capacity) {
-      if (this->capacity * 2 > Max) return false;
-      this->capacity *= 2;
-    }
+    if (this->size + 1 > this->capacity)
+        return false;
 
-    this->data[this->size++] = data;
+    this->data[this->size] = data;
+    this->size++;
     return true;
   }
   void traversal() {
@@ -23,7 +20,7 @@ class Sqlist {
   ~Sqlist(){};
 
  private:
-  int data[Max] = {0};
+  int *data;
   int size = 0;
   int capacity = 0;
 };
