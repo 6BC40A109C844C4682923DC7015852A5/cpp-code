@@ -9,10 +9,10 @@ enable_testing()
 
 find_package(GTest CONFIG REQUIRED)
 
-add_executable(Sqlist sq_main.cc)
+add_executable(demo demo.cc)
 
-target_link_libraries(Sqlist PRIVATE GTest::gtest GTest::gtest_main GTest::gmock GTest::gmock_main)
-add_test(Sqlist-test Sqlist)
+target_link_libraries(demo PRIVATE GTest::gtest GTest::gtest_main GTest::gmock GTest::gmock_main)
+add_test(Sqlist-test demo)
 
 set(CPACK_PROJECT_NAME ${PROJECT_NAME})
 set(CPACK_PROJECT_VERSION ${PROJECT_VERSION})
