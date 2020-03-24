@@ -30,7 +30,7 @@ public:
     iterator end() { return iterator(&this->data[this->size]); }
 
 public:
-    Sqlist(int n): capacity(n), data(new int[this->capacity]){};
+    Sqlist(int n): capacity(n), data(new T[this->capacity]){};
     Sqlist(){};
     bool insert(T _data){
         if(this->size + 1 > this->capacity)
