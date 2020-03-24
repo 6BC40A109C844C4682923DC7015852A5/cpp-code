@@ -30,7 +30,7 @@ public:
     iterator end() { return iterator(&this->data[this->size]); }
 
 public:
-    explicit Sqlist(int n): capacity(n), data(new int[this->capacity]){};
+    explicit Sqlist(int n): capacity(n), data(new T[this->capacity]){};
     Sqlist(){};
 
     T get(int index);
