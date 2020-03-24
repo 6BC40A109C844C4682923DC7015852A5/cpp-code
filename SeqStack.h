@@ -34,6 +34,7 @@ T SqStack<T>::pop() {
 
     int v = this->data[top];
     top--;
+    this->size--;
     return v;
 }
 
